@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Егор Летов | Гражданская Оборона</title>
+    <link rel="icon" href="https://sun9-20.userapi.com/sun9-55/s/v1/if1/XBzT-aTeLLfmFzIK8QM44F4TPGeSMo5BNPVpN3e5KNjxjDRTn0c9JCeOg00APwt-17rCfw.jpg?size=50x50&quality=96&crop=262,296,784,784&ava=1" type="image/png">
+    <link rel="shortcut icon" href="https://sun9-20.userapi.com/sun9-55/s/v1/if1/XBzT-aTeLLfmFzIK8QM44F4TPGeSMo5BNPVpN3e5KNjxjDRTn0c9JCeOg00APwt-17rCfw.jpg?size=50x50&quality=96&crop=262,296,784,784&ava=1" type="image/png">
+    <style>
+        @font-face {
+            font-family: 'LetsGo';
+            src: url('https://fonts.cdnfonts.com/css/lets-go-digital') format('woff2');
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("https://i.pinimg.com/originals/4a/3b/9c/4a3b9cba08d68bc4633008373a1ad9f1.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            color: white;
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 10%;
+            right: 10%;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+            border-left: 2px solid #8B0000;
+            border-right: 2px solid #8B0000;
+        }
+        
+        .vines {
+            position: fixed;
+            top: 0;
+            width: 250px;
+            height: 100%;
+            z-index: 100;
+            background-repeat: repeat-y;
+        }
+        
+        .vines.left {
+            left: 0;
+            background-image: url('ZaBmuZruEp4 (2).png');
+            background-position: left center;
+        }
+        
+        .vines.right {
+            right: 0;
+            background-image: url('ZaBmuZruEp4 (2).png');
+            background-position: right center;
+            transform: scaleX(-1);
+        }
+        
+        h1 {
+            font-family: 'LetsGo', sans-serif;
+            color: white;
+            text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            font-size: 4em;
+            letter-spacing: 2px;
+            margin-top: 20px;
+            text-transform: uppercase;
+        }
+        
+        .photo-caption {
+            font-size: 1.5em;
+            color: white;
+            text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            margin: 20px auto;
+            text-align: right;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+        
+        .photo-caption a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px dashed white;
+        }
+        
+        .photo-caption a:hover {
+            color: #ccc;
+            border-bottom: 1px dashed #ccc;
+        }
+        
+        .intro {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-left: 3px solid #8B0000;
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            max-width: 1200px;
+            margin: 30px auto;
+        }
+        
+        .gallery img {
+            width: 350px;
+            height: 250px;
+            object-fit: cover;
+            border: 2px solid #8B0000;
+            transition: transform 0.3s;
+        }
+        
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        
+        .music-table {
+            width: 90%;
+            max-width: 1200px;
+            margin: 50px auto;
+            border-collapse: collapse;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        
+        .music-table th, .music-table td {
+            border: 1px solid #8B0000;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .music-table th {
+            background-color: #8B0000;
+            color: white;
+            font-size: 1.1em;
+        }
+        
+        .music-table tr:nth-child(even) {
+            background-color: rgba(139, 0, 0, 0.2);
+        }
+        
+        .music-table tr:hover {
+            background-color: rgba(139, 0, 0, 0.4);
+        }
+        
+        .download-btn {
+            background-color: #8B0000;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .download-btn:hover {
+            background-color: #A52A2A;
+        }
+        
+        audio {
+            width: 100%;
+            max-width: 300px;
+            height: 40px;
+        }
+        
+        .scroll-down {
+            text-align: center;
+            margin: 30px 0;
+            animation: bounce 2s infinite;
+        }
+        
+        .scroll-down a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: rgba(139, 0, 0, 0.7);
+            border-radius: 20px;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="vines left"></div>
+    <div class="vines right"></div>
+    
+    <center><h1>Егор Летов</h1></center>
+    
+    <center>
+        <a href="https://ru.wikipedia.org/wiki/Летов,_Егор">
+            <img src="https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/2f1d397b-e6dc-4aef-bb94-b29717be16bf/1920x" 
+                 width="1250" height="750" alt="Егор Летов" style="border: 3px solid #8B0000;">
+        </a>
+    </center>
+    
+    <div class="photo-caption">
+        <a href="https://ru.wikipedia.org/wiki/Летов,_Егор">Игорь Фёдорович Летов | Cоветский и российский музыкант </a>
+    </div>
+    
+    <div class="intro">
+        <p>Егор Летов (настоящее имя Игорь Фёдорович Летов; 10 сентября 1964, Омск — 19 февраля 2008, там же) — советский и российский музыкант, поэт, лидер рок-группы «Гражданская оборона». Один из самых влиятельных представителей советского андеграунда и русского рока.</p>
+        
+        <p>Его творчество оказало огромное влияние на развитие российской рок-музыки. Летов был известен своей бескомпромиссной позицией, острыми текстами и уникальным музыкальным стилем, сочетающим элементы панк-рока, психоделического рока и фолка.</p>
+        
+        <p>Ниже вы можете познакомиться с его творчеством, послушать самые известные песни и увидеть фотографии с концертов.</p>
+    </div>
+    
+    <div class="scroll-down">
+        <a href="#music">↓ Послушать музыку ↓</a>
+    </div>
+    
+    <div class="gallery">
+        <img src="https://n1s1.hsmedia.ru/61/33/1a/61331a81d218231cec7e9908bc76193c/1500x920_0xZIjxZBsX_0903206949454658095.jpg">
+        <img src="https://seance.ru/wp-content/uploads/2020/12/1_jTRMnCAe33KgUqGoTSBAuw.jpeg">
+        <img src="https://avatars.dzeninfra.ru/get-zen_doc/1653873/pub_5e1040575d636200b185f50f_5e1439a6d7859b00b4e64c27/scale_1200">
+        <img src="https://sun9-10.userapi.com/c9788/u35565674/108251660/x_ecb973a9.jpg">
+        <img src="https://img17.rl0.ru/afisha/e1043x590p0x0f1845x1044q85i/s3.afisha.ru/mediastorage/7d/58/2cf01d05795b469a9db1f33b587d.jpg">
+        <img src="https://avatars.mds.yandex.net/get-kinopoisk-image/1704946/6092adc0-2f5e-4c5f-81a3-293f0aa57ac1/1920x">
+    </div>
+    
+    <div id="music"></div>
+    <table class="music-table">
+        <thead>
+            <tr>
+                <th>Плеер</th>
+                <th>Название и автор</th>
+                <th>Год создания</th>
+                <th>Прослушивания</th>
+                <th>Скачать</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><audio controls><source src="Egor_Letov_-_Vsjo_idjot_po_planu_47992554.mp3" type="audio/mpeg"></audio></td>
+                <td>Все идет по плану	|	Егор Летов</td>
+                <td>1988</td>
+                <td>5,234,678</td>
+                <td><a href ="https://rus.hitmotop.com/get/music/20170902/Egor_Letov_-_Vsjo_idjot_po_planu_47992554.mp3"><button class="download-btn">Скачать</button></a></td>
+            </tr>
+            <tr>
+                <td><audio controls><source src="Egor_Letov_-_Moya_oborona_47992543.mp3" type="audio/mpeg"></audio></td>
+                <td>Моя оборона		|	Егор Летов</td>
+                <td>1989</td>
+                <td>3,456,789</td>
+                <td><a href ="https://rus.hitmotop.com/get/music/20170902/Egor_Letov_-_Moya_oborona_47992543.mp3"><button class="download-btn">Скачать</button></a></td>
+            </tr>
+            <tr>
+                <td><audio controls><source src="Egor_Letov_-_Otryad_ne_zametil_poteri_bojjca_50852476.mp3" type="audio/mpeg"></audio></td>
+                <td>Отряд не заметил потери бойца	|	Егор Летов</td>
+                <td>1990</td>
+                <td>4,123,456</td>
+                <td><a href ="https://rus.hitmotop.com/get/music/20171120/Egor_Letov_-_Otryad_ne_zametil_poteri_bojjca_50852476.mp3"><button class="download-btn">Скачать</button></a></td>
+            </tr>
+            <tr>
+                <td><audio controls><source src="Egor_Letov_-_Zoopark_47992553.mp3" type="audio/mpeg"></audio></td>
+                <td>Зоопарк	|	Егор Летов</td>
+                <td>1991</td>
+                <td>2,987,654</td>
+                <td><a href ="https://rus.hitmotop.com/get/music/20170902/Egor_Letov_-_Zoopark_47992553.mp3"><button class="download-btn">Скачать</button></a></td>
+            </tr>
+            <tr>
+                <td><audio controls><source src="Egor_Letov_-_Gosudarstvo_50852459.mp3" type="audio/mpeg"></audio></td>
+                <td>Государство		|	Егор Летов</td>
+                <td>1992</td>
+                <td>3,765,432</td>
+                <td><a href ="https://rus.hitmotop.com/get/music/20171120/Egor_Letov_-_Gosudarstvo_50852459.mp3"><button class="download-btn">Скачать</button></a></td>
+            </tr>
+            <tr>
+                <td><audio controls><source src="Egor_Letov_-_Pro_durachka_79081612.mp3" type="audio/mpeg"></audio></td>
+                <td>Про дурочка		|	Егор Летов</td>
+                <td>1993</td>
+                <td>2,345,678</td>
+                <td><a href ="https://rus.hitmotop.com/get/music/20250311/Egor_Letov_-_Pro_durachka_79081612.mp3"><button class="download-btn">Скачать</button></a></td>
+            </tr>
+            <tr>
+                <td><audio controls><source src="Egor_Letov_-_Lyubo_65350650.mp3" type="audio/mpeg"></audio></td>
+                <td>Любо	|	Егор Летов</td>
+                <td>1994</td>
+                <td>3,123,456</td>
+                <td><a href ="https://rus.hitmotop.com/get/music/20190710/Egor_Letov_-_Lyubo_65350650.mp3"><button class="download-btn">Скачать</button></a></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <audio id="clickSound" src="grazhdanskaya-oborona-bespontovyjj-pirozhok-60242995-y2l6txm8_3sTSshRt.mp3"></audio>
+    
+    <script>
+        // Обработчик клика по странице
+        document.addEventListener('click', function() {
+            const sound = document.getElementById('clickSound');
+            sound.currentTime = 0;
+            sound.play();
+        });
+        
+        // Параллакс эффект для лоз
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.pageYOffset;
+            const vinesLeft = document.querySelector('.vines.left');
+            const vinesRight = document.querySelector('.vines.right');
+            
+            vinesLeft.style.backgroundPositionY = -scrollPosition * 5 + 'px';
+            vinesRight.style.backgroundPositionY = -scrollPosition * 5 + 'px';
+        });
+    </script>
+</body>
+</html>
